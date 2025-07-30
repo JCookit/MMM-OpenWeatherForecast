@@ -283,7 +283,7 @@ Module.register("MMM-OpenWeatherForecast", {
         this.weatherData = payload;
         this.formattedWeatherData = this.processWeatherData();
 
-        this.updateDom(this.config.updateFadeSpeed);
+        this.updateDom(0); // (this.config.updateFadeSpeed);
 
         // broadcast weather update
         this.sendNotification("OPENWEATHER_FORECAST_WEATHER_UPDATE", payload);
